@@ -14,7 +14,7 @@ exports = {
     try {
       await post('/events/ticket-resolved', { ticket_id: ticket.id });
     } catch (err) {
-      console.error('Native QA: failed to send resolved ticket', ticket.id, err.status, err.response);
+      console.error('FreshQA: failed to send resolved ticket', ticket.id, err.status, err.response);
     }
   },
 
@@ -22,13 +22,13 @@ exports = {
   onAppInstallHandler: async function () {
     try {
       await $schedule.create({
-        name: 'native_qa_nightly_backfill',
+        name: 'freshqa_nightly_backfill',
         data: {},
         schedule_at: new Date(Date.now() + 5 * 60 * 1000).toISOString(),
         repeat: { time_unit: 'hours', frequency: 24 },
       });
     } catch (err) {
-      console.error('Native QA: could not create backfill schedule', err);
+      console.error('FreshQA: could not create backfill schedule', err);
     }
     renderData();
   },
@@ -38,7 +38,7 @@ exports = {
       await post('/events/backfill/collect');
       await post('/events/backfill', { days: 2 });
     } catch (err) {
-      console.error('Native QA: backfill failed', err.status, err.response);
+      console.error('FreshQA: backfill failed', err.status, err.response);
     }
   },
 };

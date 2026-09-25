@@ -12,7 +12,7 @@ This is the complete, in-order checklist to run FreshQA against a real Freshdesk
 | 2 | A custom ticket field `cf_quality_score` | Created once, by hand, in Freshdesk Admin | Freshdesk itself (no `.env` entry) |
 | 3 | Anthropic (Claude) API key | console.anthropic.com | `backend/.env` → `ANTHROPIC_API_KEY` |
 | 4 | A shared secret you invent | Any random string | `backend/.env` → `QA_API_SECRET`, and the FDK app's install screen → **API secret** |
-| 5 | A public HTTPS URL for the backend | ngrok (or any tunnel/host) | The FDK app's install screen → **Native QA backend host** |
+| 5 | A public HTTPS URL for the backend | ngrok (or any tunnel/host) | The FDK app's install screen → **FreshQA backend host** |
 | 6 | Freshworks Developer Kit (FDK) CLI | npm | Your machine, to run/publish `fdk-app/` |
 
 Nothing else is required — no Freshservice, no OAuth app, no Freshworks Marketplace account, for local/demo use.
@@ -57,7 +57,7 @@ FreshQA writes each ticket's score into a custom Number field. Freshdesk's API c
    GRADER=claude
    GRADER_EFFORT=low
    ```
-   `GRADER_EFFORT` can be `low`, `medium` or `high` — `low` is cheapest and is what the cost figures in [docs/02-native-qa-design.md](02-native-qa-design.md) assume. This project uses `claude-sonnet-5` for grading and coaching drafts (see `backend/src/services/claudeClient.js`).
+   `GRADER_EFFORT` can be `low`, `medium` or `high` — `low` is cheapest and is what the cost figures in [docs/02-freshqa-design.md](02-freshqa-design.md) assume. This project uses `claude-sonnet-5` for grading and coaching drafts (see `backend/src/services/claudeClient.js`).
 
 **Quick check** — with the key exported, this should return a short reply, not an auth error:
 ```bash
@@ -101,10 +101,10 @@ QUEUE_SCORE_THRESHOLD=70
 QUEUE_RANDOM_SAMPLE_PCT=5
 
 PORT=4000
-DB_PATH=data/native-qa.db
+DB_PATH=data/freshqa.db
 ```
 
-`QUEUE_SCORE_THRESHOLD` and `QUEUE_RANDOM_SAMPLE_PCT` control the human review queue (see [docs/02-native-qa-design.md](02-native-qa-design.md) § Human review queue) — the defaults are fine to start.
+`QUEUE_SCORE_THRESHOLD` and `QUEUE_RANDOM_SAMPLE_PCT` control the human review queue (see [docs/02-freshqa-design.md](02-freshqa-design.md) § Human review queue) — the defaults are fine to start.
 
 Install and test:
 
@@ -146,7 +146,7 @@ fdk run
 
 `fdk run` starts a local Freshdesk test harness and prints a URL (usually `https://localhost:10001`). Open it, and on the app's install/configuration screen enter:
 
-- **Native QA backend host**: your ngrok domain from step 6, e.g. `xxxx.ngrok-free.app` (no `https://`)
+- **FreshQA backend host**: your ngrok domain from step 6, e.g. `xxxx.ngrok-free.app` (no `https://`)
 - **API secret**: the exact same value as `QA_API_SECRET` in `backend/.env`
 
 Once installed, the coach workspace appears as a left-nav icon in Freshdesk, and the agent sidebar appears on every ticket.

@@ -15,8 +15,12 @@
         "qaPatch": {}
       },
       "events": {
-        "onAppInstall": { "handler": "onAppInstallHandler" },
-        "onScheduledEvent": { "handler": "onScheduledEventHandler" }
+        "onAppInstall": {
+          "handler": "onAppInstallHandler"
+        },
+        "onScheduledEvent": {
+          "handler": "onScheduledEventHandler"
+        }
       }
     },
     "support_ticket": {
@@ -27,12 +31,14 @@
         }
       },
       "events": {
-        "onTicketUpdate": { "handler": "onTicketUpdateHandler" }
+        "onTicketUpdate": {
+          "handler": "onTicketUpdateHandler"
+        }
       }
     }
   },
   "engines": {
     "node": "18.20.8",
-    "fdk": "9.3.1"
+    "fdk": "9.8.2"
   }
 }

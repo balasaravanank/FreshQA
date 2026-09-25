@@ -10,7 +10,7 @@ function requireEnv(name) {
 
 module.exports = {
   port: Number(process.env.PORT) || 4000,
-  dbPath: path.join(__dirname, '..', process.env.DB_PATH || 'data/native-qa.db'),
+  dbPath: path.join(__dirname, '..', process.env.DB_PATH || 'data/freshqa.db'),
   grader: process.env.GRADER || 'claude',
   graderEffort: process.env.GRADER_EFFORT || 'low',
   apiSecret: process.env.QA_API_SECRET || '',

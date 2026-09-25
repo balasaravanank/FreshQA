@@ -1,7 +1,7 @@
 {
   "backend_host": {
-    "display_name": "Native QA backend host",
-    "description": "Domain of the Native QA backend without protocol, e.g. native-qa.example.com or your ngrok domain",
+    "display_name": "FreshQA backend host",
+    "description": "Domain of the FreshQA backend without protocol, e.g. freshqa.example.com or your ngrok domain",
     "type": "text",
     "required": true
   },

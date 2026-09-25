@@ -1,5 +1,20 @@
 const axios = require('axios');
+const fs = require('fs');
+const path = require('path');
 const config = require('../config');
+
+// Freshdesk's API refuses to change an agent's profile name ("Not allowed to edit Agent's
+// profile information") — that's only editable by the agent themself after accepting their
+// invite. This local override lets seed/demo scripts give agents a friendly display name
+// without depending on that. See scripts/seed/push-to-freshdesk.js.
+const AGENT_DIRECTORY_PATH = path.join(__dirname, '..', '..', 'data', 'agent-directory.json');
+function agentDirectory() {
+  try {
+    return JSON.parse(fs.readFileSync(AGENT_DIRECTORY_PATH, 'utf8'));
+  } catch {
+    return {};
+  }
+}
 
 const SOURCES = { 1: 'email', 2: 'portal', 3: 'phone', 7: 'chat', 9: 'feedback_widget', 10: 'outbound_email' };
 const RESOLVED_STATUSES = [4, 5];
@@ -30,6 +45,8 @@ function stripHtml(html) {
 const agentNames = new Map();
 async function getAgentName(agentId) {
   if (!agentId) return 'Unassigned';
+  const override = agentDirectory()[String(agentId)];
+  if (override) return override;
   if (!agentNames.has(agentId)) {
     try {
       const { data } = await http().get(`/agents/${agentId}`);

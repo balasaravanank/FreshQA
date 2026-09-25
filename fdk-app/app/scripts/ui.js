@@ -11,28 +11,30 @@ window.UI = (function () {
   const RAMP = ['#cde2fb', '#b7d3f6', '#9ec5f4', '#86b6ef', '#6da7ec', '#5598e7', '#3987e5', '#2a78d6', '#256abf', '#1c5cab', '#184f95', '#104281', '#0d366b'];
 
   function esc(value) {
-    return String(value == null ? '' : value).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const isNil = value === null || value === undefined;
+    return String(isNil ? '' : value).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
 
   function rampColor(pct) {
-    if (pct == null) return 'transparent';
+    if (pct === null || pct === undefined) return 'transparent';
     const i = Math.min(RAMP.length - 1, Math.max(0, Math.round((pct / 100) * (RAMP.length - 1))));
     return RAMP[i];
   }
 
   function inkOn(pct) {
-    return pct != null && pct >= 55 ? '#ffffff' : '#0b0b0b';
+    const hasValue = pct !== null && pct !== undefined;
+    return hasValue && pct >= 55 ? '#ffffff' : '#0b0b0b';
   }
 
   function reasonBadges(reasons) {
     return (reasons || [])
-      .map((r) => `<span class="badge ${r === 'auto_fail' ? 'badge-critical' : ''}">${r === 'auto_fail' ? '⛔ ' : ''}${esc(REASONS[r] || r)}</span>`)
+      .map((r) => `<span class="badge ${r === 'auto_fail' ? 'badge-critical' : ''}">${r === 'auto_fail' ? Icon.icon('octagon', { size: 12 }) : ''}${esc(REASONS[r] || r)}</span>`)
       .join(' ');
   }
 
   function scoreText(evaluation) {
     return evaluation.auto_failed
-      ? `<span class="status-critical">⛔ ${esc(evaluation.final_score)}% · Auto-fail</span>`
+      ? `<span class="status-critical">${Icon.icon('octagon', { size: 14 })}${esc(evaluation.final_score)}% · Auto-fail</span>`
       : `${esc(evaluation.final_score)}%`;
   }
 
@@ -47,13 +49,14 @@ window.UI = (function () {
   }
 
   function money(usd, digits) {
-    return '$' + Number(usd || 0).toFixed(digits == null ? 2 : digits);
+    const isNil = digits === null || digits === undefined;
+    return '$' + Number(usd || 0).toFixed(isNil ? 2 : digits);
   }
 
   function toast(message, isError) {
     const el = document.createElement('div');
     el.className = 'toast' + (isError ? ' toast-error' : '');
-    el.textContent = message;
+    el.innerHTML = Icon.icon(isError ? 'triangle' : 'check', { size: 15 }) + `<span>${esc(message)}</span>`;
     document.body.appendChild(el);
     setTimeout(() => el.remove(), 3500);
   }

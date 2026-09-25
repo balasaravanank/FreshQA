@@ -3,23 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Native QA</title>
+  <title>FreshQA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/app.css">
   <script src="{{{appclient}}}"></script>
 </head>
 <body>
   <header class="topbar">
-    <h1>Native QA</h1>
+    <div class="brand">
+      <span class="brand-mark" id="brand-icon"></span>
+      <h1>FreshQA</h1>
+    </div>
     <nav class="tabs" id="tabs">
-      <button class="tab active" data-tab="dashboard">Dashboard</button>
-      <button class="tab" data-tab="queue">Review queue <span class="count" id="queue-count">–</span></button>
-      <button class="tab" data-tab="appeals">Appeals <span class="count" id="appeal-count">–</span></button>
-      <button class="tab" data-tab="coaching">Coaching</button>
-      <button class="tab" data-tab="scorecard">Scorecard</button>
+      <button class="tab active" data-tab="dashboard" data-icon="dashboard">Dashboard</button>
+      <button class="tab" data-tab="queue" data-icon="inbox">Review queue <span class="count" id="queue-count">–</span></button>
+      <button class="tab" data-tab="appeals" data-icon="flag">Appeals <span class="count" id="appeal-count">–</span></button>
+      <button class="tab" data-tab="coaching" data-icon="graduation">Coaching</button>
+      <button class="tab" data-tab="scorecard" data-icon="clipboard">Scorecard</button>
     </nav>
+    <span class="live-pill" id="live-pill"><span class="live-dot"></span>Live</span>
   </header>
   <main id="view"><div class="empty">Loading…</div></main>
 
+  <script src="config.js"></script>
+  <script src="scripts/icons.js"></script>
   <script src="scripts/api.js"></script>
   <script src="scripts/ui.js"></script>
   <script src="scripts/workspace.js"></script>

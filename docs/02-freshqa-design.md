@@ -1,10 +1,10 @@
-# 02 · Native QA design
+# 02 · FreshQA design
 
 [← Back to overview](README.md)
 
 ## Same job, done natively and more efficiently
 
-| # | MaestroQA step | Inefficiency | Native QA |
+| # | MaestroQA step | Inefficiency | FreshQA |
 |---|---|---|---|
 | 1 | Data in | Hourly sync into a separate app, a 45-day window, a 12 h first sync | **No sync.** The FDK serverless `onTicketUpdate` event fires when a ticket becomes Resolved/Closed, and the ticket's `responder_id` is the graded agent |
 | 2 | Scorecard | Built by hand | **Same model and same math** (standard/bonus/auto-fail sections, N/A, total or weighted, versions), plus an **AI grading instruction** per criterion and a ready-made template |

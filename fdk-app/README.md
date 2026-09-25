@@ -1,4 +1,4 @@
-# Native QA: Freshdesk app (FDK, App SDK v3.0)
+# FreshQA: Freshdesk app (FDK, App SDK v3.0)
 
 | Piece | File | What it does |
 |---|---|---|

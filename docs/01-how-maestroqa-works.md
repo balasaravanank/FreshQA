@@ -35,4 +35,4 @@ MaestroQA is the QA tool many Freshdesk teams pay for today. This doc describes 
 
 > **Note:** a competitor's article reports that MaestroQA rebranded to **Rippit** in Feb–Mar 2026 and is moving away from QA ([Oversai](https://www.oversai.com/news/maestroqa-rebranded-rippit-2026)). This comes from a competitor, so verify it before relying on it.
 
-Next: [02 · Native QA design →](02-native-qa-design.md)
+Next: [02 · FreshQA design →](02-freshqa-design.md)

@@ -125,7 +125,7 @@ function noteHtml(evaluation, definition) {
     })
     .join('');
   return (
-    `<p><b>Native QA score: ${evaluation.final_score}%</b>${evaluation.auto_failed ? ' <b>(AUTO-FAIL)</b>' : ''}</p>` +
+    `<p><b>FreshQA score: ${evaluation.final_score}%</b>${evaluation.auto_failed ? ' <b>(AUTO-FAIL)</b>' : ''}</p>` +
     `<p>${evaluation.summary || ''}</p><ul>${rows}</ul>`
   );
 }

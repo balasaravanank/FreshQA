@@ -30,11 +30,9 @@ window.QA = (function () {
         throw new Error(errorMessage(data, 'Request failed (' + err.status + ')'));
       }
     }
-    const res = await fetch('/api' + path, {
-      method,
-      headers: { 'Content-Type': 'application/json' },
-      body: body ? JSON.stringify(body) : undefined,
-    });
+    const headers = { 'Content-Type': 'application/json' };
+    if (window.QA_PREVIEW_SECRET) headers['X-QA-Secret'] = window.QA_PREVIEW_SECRET;
+    const res = await fetch('/api' + path, { method, headers, body: body ? JSON.stringify(body) : undefined });
     const data = await res.json().catch(() => null);
     if (!res.ok) throw new Error(errorMessage(data, 'Request failed (' + res.status + ')'));
     return data;
