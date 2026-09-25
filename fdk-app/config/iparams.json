@@ -1,0 +1,15 @@
+{
+  "backend_host": {
+    "display_name": "Native QA backend host",
+    "description": "Domain of the Native QA backend without protocol, e.g. native-qa.example.com or your ngrok domain",
+    "type": "text",
+    "required": true
+  },
+  "api_secret": {
+    "display_name": "API secret",
+    "description": "Must match QA_API_SECRET in the backend's .env",
+    "type": "text",
+    "required": true,
+    "secure": true
+  }
+}

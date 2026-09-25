@@ -1,0 +1,8 @@
+{
+  "subject": "Call transcript - refund request on annual plan",
+  "channel": "phone",
+  "agentKey": "meera",
+  "simulated_csat": 2,
+  "customer_opening": "CUSTOMER: Hi, I meant to pay monthly but got charged for the annual plan, can I get the difference back?",
+  "agent_reply": "AGENT: Sure, what's your account email? ... Got it, I'll refund $228 back to your card, give it a week or so."
+}

@@ -1,0 +1,8 @@
+{
+  "subject": "Call transcript - router dropping connection every 20 minutes",
+  "channel": "phone",
+  "agentKey": "priya",
+  "simulated_csat": 4,
+  "customer_opening": "CUSTOMER: Hi, yeah, my internet has been dropping every twenty minutes or so for the last two days, it's driving me crazy, I work from home.",
+  "agent_reply": "AGENT: That's exactly the kind of thing that ruins a workday, I'm sorry you've been dealing with it for two days already. Let's figure out what's going on - can you tell me if the lights on the router are steady or blinking when it drops? ... Okay, the internet light blinking red tells me it's likely a line sync issue on our end, not your equipment. I'm going to run a remote line reset from here - you'll lose connection for about 90 seconds, then it should come back stable. While that runs, I'm also scheduling a technician check for tomorrow morning between 9 and 11 just in case the drops continue, so you're not stuck waiting on this again. I'll send you a text confirmation of that appointment in the next five minutes. Does that work for your schedule?"
+}

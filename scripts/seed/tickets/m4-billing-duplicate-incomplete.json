@@ -1,0 +1,8 @@
+{
+  "subject": "Double charged on my last order",
+  "channel": "email",
+  "agentKey": "meera",
+  "simulated_csat": 2,
+  "customer_opening": "I think I was charged twice for my last order, can you check?",
+  "agent_reply": "I see two charges on the account, I've started a refund for one of them."
+}

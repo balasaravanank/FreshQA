@@ -1,0 +1,137 @@
+{
+  "name": "Support QA Scorecard",
+  "scoringMethod": "total_points",
+  "sections": [
+    {
+      "id": "empathy",
+      "name": "Greeting & Empathy",
+      "type": "standard",
+      "criteria": [
+        {
+          "id": "acknowledge",
+          "question": "Did the agent acknowledge the customer's situation and feelings?",
+          "aiInstruction": "Yes if the agent explicitly recognises the customer's frustration, urgency or impact before or while solving. Partially if a generic apology only. No if the reply jumps straight to the solution or ignores clear frustration.",
+          "allowNA": false,
+          "options": [
+            { "id": "yes", "label": "Yes", "points": 5 },
+            { "id": "partial", "label": "Partially", "points": 2 },
+            { "id": "no", "label": "No", "points": 0 }
+          ]
+        },
+        {
+          "id": "tone",
+          "question": "Was the tone professional, warm and respectful?",
+          "aiInstruction": "No if the reply is curt, dismissive, blaming, pressuring or passive-aggressive. Partially if polite but cold or robotic.",
+          "allowNA": false,
+          "options": [
+            { "id": "yes", "label": "Yes", "points": 5 },
+            { "id": "partial", "label": "Partially", "points": 2 },
+            { "id": "no", "label": "No", "points": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resolution",
+      "name": "Understanding & Resolution",
+      "type": "standard",
+      "criteria": [
+        {
+          "id": "understanding",
+          "question": "Did the agent correctly understand the customer's issue?",
+          "aiInstruction": "Yes if the reply addresses the actual problem the customer described. No if it answers a different question or misses the main ask.",
+          "allowNA": false,
+          "options": [
+            { "id": "yes", "label": "Yes", "points": 5 },
+            { "id": "partial", "label": "Partially", "points": 2 },
+            { "id": "no", "label": "No", "points": 0 }
+          ]
+        },
+        {
+          "id": "resolved",
+          "question": "Did the agent resolve the issue or give a concrete, correct solution?",
+          "aiInstruction": "Yes if the issue is fixed or the customer has a specific, actionable solution. Partially if the fix is incomplete, vague or leaves part of the request unanswered. No if nothing concrete was done.",
+          "allowNA": false,
+          "options": [
+            { "id": "yes", "label": "Yes", "points": 10 },
+            { "id": "partial", "label": "Partially", "points": 5 },
+            { "id": "no", "label": "No", "points": 0 }
+          ]
+        },
+        {
+          "id": "next_steps",
+          "question": "Did the agent set clear expectations (what happens next and when)?",
+          "aiInstruction": "Yes if the customer knows what happens next with a concrete timeframe (e.g. '3-5 business days', 'tomorrow 9-11'). Partially if next steps are given without a timeframe or with vague wording like 'soon' or 'eventually'. N/A only if the issue was fully resolved in the reply and nothing further will happen.",
+          "allowNA": true,
+          "options": [
+            { "id": "yes", "label": "Yes", "points": 5 },
+            { "id": "partial", "label": "Partially", "points": 2 },
+            { "id": "no", "label": "No", "points": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "type": "standard",
+      "criteria": [
+        {
+          "id": "clarity",
+          "question": "Was the reply clear, complete and easy to follow?",
+          "aiInstruction": "No if the reply is confusing, missing key information the customer needs, or so short it leaves the customer guessing.",
+          "allowNA": false,
+          "options": [
+            { "id": "yes", "label": "Yes", "points": 5 },
+            { "id": "partial", "label": "Partially", "points": 2 },
+            { "id": "no", "label": "No", "points": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compliance",
+      "name": "Process & Compliance",
+      "type": "auto_fail",
+      "criteria": [
+        {
+          "id": "identity_verification",
+          "question": "Before changing account access, passwords, 2FA, refunds or payment details, did the agent verify the requester's identity?",
+          "aiInstruction": "Sensitive actions are: resetting a password or sending a reset link, disabling or changing 2FA, changing the account email or phone, changing payment details, and refunding or changing a plan at the customer's request. Correcting the company's own error (for example reversing a duplicate charge or refunding a late-delivery shipping fee) is NOT a sensitive action. Fail if a sensitive action was taken after only asking for the email address, or with no verification at all. Pass if at least one additional factor was checked (e.g. last 4 digits of card or phone, billing zip, last invoice amount). N/A if no sensitive action was taken.",
+          "allowNA": true,
+          "options": [
+            { "id": "pass", "label": "Pass", "points": 0 },
+            { "id": "fail", "label": "Fail", "points": 0, "autoFail": true }
+          ]
+        },
+        {
+          "id": "sensitive_data",
+          "question": "Did the agent avoid exposing passwords or sensitive data in plain text?",
+          "aiInstruction": "Fail if the agent wrote a password, full card number or other secret in the reply.",
+          "allowNA": false,
+          "options": [
+            { "id": "pass", "label": "Pass", "points": 0 },
+            { "id": "fail", "label": "Fail", "points": 0, "autoFail": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bonus",
+      "name": "Going Above & Beyond",
+      "type": "bonus",
+      "criteria": [
+        {
+          "id": "proactive",
+          "question": "Did the agent go beyond the ask (proactive tip, prevention, personal follow-up, goodwill gesture)?",
+          "aiInstruction": "Yes only for something genuinely extra: a prevention tip, a personal follow-up commitment, a goodwill credit, or anticipating the next problem.",
+          "allowNA": false,
+          "options": [
+            { "id": "yes", "label": "Yes", "points": 3 },
+            { "id": "no", "label": "No", "points": 0 }
+          ]
+        }
+      ]
+    }
+  ]
+}

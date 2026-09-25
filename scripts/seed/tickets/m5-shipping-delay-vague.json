@@ -1,0 +1,8 @@
+{
+  "subject": "Where is my order, it's very late",
+  "channel": "email",
+  "agentKey": "meera",
+  "simulated_csat": 3,
+  "customer_opening": "This was supposed to be a birthday gift and it's already 4 days late. What's going on?",
+  "agent_reply": "Sorry about that, it's stuck with the carrier right now. It should arrive soon, hopefully in the next few days."
+}

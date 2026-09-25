@@ -1,0 +1,8 @@
+{
+  "subject": "Lost my phone, can't get past 2FA, this is a disaster",
+  "channel": "chat",
+  "agentKey": "priya",
+  "simulated_csat": 5,
+  "customer_opening": "I lost my phone yesterday and now I can't get past two-factor login. All my client data is in there. I am panicking, please help me get back in.",
+  "agent_reply": "That's a genuinely scary situation, losing your phone AND being locked out of client data - let's get you back in safely right now. Because this is a security-sensitive recovery, I do need to verify your identity a bit more thoroughly than usual: can you confirm the email on the account, your billing zip code, and the last invoice amount you were charged? ... Thank you, all three check out. I've temporarily disabled 2FA on your account so you can log in with just your password - please log in now and immediately set up 2FA again using an authenticator app instead of SMS, since that survives a lost phone. I'll stay online for the next few minutes in case you hit any issues getting back in."
+}

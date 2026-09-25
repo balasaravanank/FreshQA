@@ -1,0 +1,8 @@
+{
+  "subject": "Call transcript - requesting refund on annual plan",
+  "channel": "phone",
+  "agentKey": "priya",
+  "simulated_csat": 5,
+  "customer_opening": "CUSTOMER: Hey, I paid for the annual plan by mistake instead of monthly, can you refund the difference?",
+  "agent_reply": "AGENT: Of course, that's an easy mix-up and we can sort it out. Before I touch anything on the account, I need to quickly verify it's you - can you confirm the email on file and the last four digits of the card used for the charge? ... Perfect, thank you, verified. I can see the annual charge of $228 from yesterday. I've processed a full refund of that charge and switched your plan to monthly at $22/month starting today - you won't be double charged next cycle. The refund will land back on your card in 5-7 business days since that's the bank's processing window, not something I can speed up on my end, but I'll email you the refund confirmation number right now so you have it on record."
+}

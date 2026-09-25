@@ -1,0 +1,8 @@
+{
+  "subject": "Call transcript - internet keeps dropping",
+  "channel": "phone",
+  "agentKey": "rahul",
+  "simulated_csat": 2,
+  "customer_opening": "CUSTOMER: My internet drops every twenty minutes, it's been two days.",
+  "agent_reply": "AGENT: Okay, that's usually the router. Try unplugging it for ten seconds and plugging it back in. If it keeps happening call back."
+}

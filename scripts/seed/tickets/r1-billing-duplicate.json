@@ -1,0 +1,8 @@
+{
+  "subject": "Charged twice for order #55190",
+  "channel": "email",
+  "agentKey": "rahul",
+  "simulated_csat": 2,
+  "customer_opening": "I was charged twice for order #55190. Please refund the extra charge.",
+  "agent_reply": "I checked and yes there was a duplicate charge. I've submitted a refund request. It should process in a few days."
+}

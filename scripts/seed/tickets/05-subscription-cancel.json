@@ -1,0 +1,8 @@
+{
+  "subject": "Want to cancel my subscription, not happy with the price increase",
+  "channel": "chat",
+  "agentKey": "priya",
+  "simulated_csat": 4,
+  "customer_opening": "I want to cancel. You raised the price again and I don't think it's worth it anymore. Please just process the cancellation.",
+  "agent_reply": "Totally fair, and I appreciate you telling me why rather than just letting the card decline - the price change is a real reason to reconsider value. I won't pressure you to stay, but I do want to make sure you know what you'd be giving up: your saved projects stay archived for 90 days if you change your mind. If you'd like, there's also a lower-tier plan at your old price point with slightly fewer features - entirely your call, no pressure either way. Which would you like: downgrade, or go ahead with the full cancellation? Either way I'll process it within the next few minutes and send written confirmation."
+}

@@ -1,0 +1,35 @@
+{
+  "qaGet": {
+    "schema": {
+      "method": "GET",
+      "host": "<%= iparam.backend_host %>",
+      "path": "/api<%= context.path %>",
+      "headers": { "X-QA-Secret": "<%= iparam.api_secret %>", "Content-Type": "application/json" }
+    },
+    "options": { "retryDelay": 1000, "maxAttempts": 2 }
+  },
+  "qaPost": {
+    "schema": {
+      "method": "POST",
+      "host": "<%= iparam.backend_host %>",
+      "path": "/api<%= context.path %>",
+      "headers": { "X-QA-Secret": "<%= iparam.api_secret %>", "Content-Type": "application/json" }
+    }
+  },
+  "qaPut": {
+    "schema": {
+      "method": "PUT",
+      "host": "<%= iparam.backend_host %>",
+      "path": "/api<%= context.path %>",
+      "headers": { "X-QA-Secret": "<%= iparam.api_secret %>", "Content-Type": "application/json" }
+    }
+  },
+  "qaPatch": {
+    "schema": {
+      "method": "PATCH",
+      "host": "<%= iparam.backend_host %>",
+      "path": "/api<%= context.path %>",
+      "headers": { "X-QA-Secret": "<%= iparam.api_secret %>", "Content-Type": "application/json" }
+    }
+  }
+}

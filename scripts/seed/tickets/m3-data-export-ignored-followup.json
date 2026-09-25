@@ -1,0 +1,8 @@
+{
+  "subject": "Need to export all my data",
+  "channel": "email",
+  "agentKey": "meera",
+  "simulated_csat": 3,
+  "customer_opening": "We're evaluating other tools. I want to export contacts, project history, and invoices before we decide anything.",
+  "agent_reply": "You can export contacts and project history from Settings > Data > Export. For invoices you'd need to reach out to billing separately, I don't handle that part."
+}

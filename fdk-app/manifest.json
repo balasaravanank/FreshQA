@@ -1,0 +1,38 @@
+{
+  "platform-version": "3.0",
+  "modules": {
+    "common": {
+      "location": {
+        "full_page_app": {
+          "url": "workspace.html",
+          "icon": "styles/images/icon.svg"
+        }
+      },
+      "requests": {
+        "qaGet": {},
+        "qaPost": {},
+        "qaPut": {},
+        "qaPatch": {}
+      },
+      "events": {
+        "onAppInstall": { "handler": "onAppInstallHandler" },
+        "onScheduledEvent": { "handler": "onScheduledEventHandler" }
+      }
+    },
+    "support_ticket": {
+      "location": {
+        "ticket_sidebar": {
+          "url": "sidebar.html",
+          "icon": "styles/images/icon.svg"
+        }
+      },
+      "events": {
+        "onTicketUpdate": { "handler": "onTicketUpdateHandler" }
+      }
+    }
+  },
+  "engines": {
+    "node": "18.20.8",
+    "fdk": "9.3.1"
+  }
+}

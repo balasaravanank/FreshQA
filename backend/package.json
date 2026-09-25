@@ -1,0 +1,24 @@
+{
+  "name": "freshqa-backend",
+  "version": "0.2.0",
+  "description": "Native QA for Freshdesk: AI grades 100% of resolved tickets against a MaestroQA-style scorecard",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "start": "node --no-warnings src/server.js",
+    "dev": "node --no-warnings --watch src/server.js",
+    "test": "node --no-warnings --test",
+    "seed:local": "node --no-warnings ../scripts/seed/score-local.js",
+    "seed:push": "node --no-warnings ../scripts/seed/push-to-freshdesk.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "zod": "^3.25.76"
+  }
+}

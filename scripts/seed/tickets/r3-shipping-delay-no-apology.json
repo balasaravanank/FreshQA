@@ -1,0 +1,8 @@
+{
+  "subject": "Package is 4 days late",
+  "channel": "email",
+  "agentKey": "rahul",
+  "simulated_csat": 2,
+  "customer_opening": "My order was supposed to arrive 4 days ago. It was a gift. Where is it?",
+  "agent_reply": "Looks like it's delayed with the carrier. It should arrive eventually, tracking will update when there's movement."
+}

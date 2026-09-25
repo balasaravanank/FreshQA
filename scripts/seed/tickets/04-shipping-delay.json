@@ -1,0 +1,8 @@
+{
+  "subject": "Order was supposed to arrive 4 days ago - where is it??",
+  "channel": "email",
+  "agentKey": "priya",
+  "simulated_csat": 5,
+  "customer_opening": "This was supposed to be a birthday gift and it's now 4 days late with zero updates. I'm really disappointed, I chose you specifically because of the delivery guarantee.",
+  "agent_reply": "I can imagine how disappointing that is when it was meant for a birthday - I'm sorry we let you down on something with a deadline attached. I checked the tracking and your package is genuinely stuck at a regional facility due to a carrier backlog, not something on our end that got missed. Here's what I'm doing right now: I've escalated it directly with the carrier for priority handling, and it's now scheduled to arrive by tomorrow (Thursday) end of day. Since we missed our delivery guarantee, I've also refunded your shipping fee in full and added a $15 credit for the trouble. I'll personally check the tracking tomorrow afternoon and email you either way - good news or if it's still stuck, so you're not left wondering again."
+}

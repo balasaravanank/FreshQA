@@ -1,0 +1,8 @@
+{
+  "subject": "Charged TWICE for my order, this is ridiculous",
+  "channel": "email",
+  "agentKey": "priya",
+  "simulated_csat": 5,
+  "customer_opening": "I just checked my card statement and you have charged me TWICE for order #48213. This is the second time something like this has happened and honestly I'm about done with this company. Fix it NOW.",
+  "agent_reply": "I completely understand why this is infuriating, especially since it's happened before - I'd be frustrated too, and I'm sorry we put you through this again. I pulled up order #48213 and confirmed the duplicate charge of $86.40 on your card ending 4417. I've reversed the duplicate charge right now; it will show back on your statement within 3-5 business days, and I'm also crediting your account $10 for the inconvenience. To make sure this doesn't happen a third time, I've flagged your account so our billing team double-checks any future charges manually before they process. Can you confirm the refund shows up by Friday, or reply here and I'll chase it personally?"
+}

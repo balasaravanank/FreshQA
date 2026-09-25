@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Native QA</title>
+  <link rel="stylesheet" href="styles/app.css">
+  <script src="{{{appclient}}}"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Native QA</h1>
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-tab="dashboard">Dashboard</button>
+      <button class="tab" data-tab="queue">Review queue <span class="count" id="queue-count">–</span></button>
+      <button class="tab" data-tab="appeals">Appeals <span class="count" id="appeal-count">–</span></button>
+      <button class="tab" data-tab="coaching">Coaching</button>
+      <button class="tab" data-tab="scorecard">Scorecard</button>
+    </nav>
+  </header>
+  <main id="view"><div class="empty">Loading…</div></main>
+
+  <script src="scripts/api.js"></script>
+  <script src="scripts/ui.js"></script>
+  <script src="scripts/workspace.js"></script>
+</body>
+</html>

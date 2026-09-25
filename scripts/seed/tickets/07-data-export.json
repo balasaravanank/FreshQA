@@ -1,0 +1,8 @@
+{
+  "subject": "How do I export all my data before switching tools?",
+  "channel": "email",
+  "agentKey": "priya",
+  "simulated_csat": 5,
+  "customer_opening": "We're evaluating other tools and I want to export everything first just in case - contacts, project history, invoices. Is that possible?",
+  "agent_reply": "Absolutely, and smart move to get that sorted before you decide anything - I'll make sure you leave with everything either way. You can export contacts and project history yourself from Settings > Data > Export as a CSV bundle, that's instant. Invoices need to come from our billing team since they're stored separately for compliance reasons, so I've already submitted that request on your behalf - expect a zip file at this email within 24 hours, no need to chase it. I'm also attaching a one-page guide on what each exported file contains so nothing gets lost in translation if you do move tools. If the invoice export hasn't landed by tomorrow afternoon, just reply to this thread and I'll follow up directly with billing myself."
+}

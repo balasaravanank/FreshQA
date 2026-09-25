@@ -1,0 +1,8 @@
+{
+  "subject": "Cancelling my subscription",
+  "channel": "chat",
+  "agentKey": "rahul",
+  "simulated_csat": 2,
+  "customer_opening": "The price went up again, I want to cancel.",
+  "agent_reply": "Before you cancel, are you sure? You'll lose all your saved projects and you can't get this price back later. A lot of people regret cancelling. Do you really want to go through with it?"
+}

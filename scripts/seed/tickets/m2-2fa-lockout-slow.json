@@ -1,0 +1,8 @@
+{
+  "subject": "Lost phone, locked out of 2FA",
+  "channel": "chat",
+  "agentKey": "meera",
+  "simulated_csat": 3,
+  "customer_opening": "I lost my phone and now I can't get past two-factor authentication. I really need into my account.",
+  "agent_reply": "I can turn off 2FA for you. What's the account email? ... Okay, done, it's off now. You should be able to log in."
+}
